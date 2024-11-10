@@ -1,5 +1,4 @@
 import React from 'react'
-import { SlMenu } from "react-icons/sl";
 
 const Navbar = () => {
   return (
