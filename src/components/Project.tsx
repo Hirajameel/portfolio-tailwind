@@ -1,51 +1,62 @@
 import React from 'react'
 import Heading from './Heading'
 import Card from './Card'
+import '../app/styles/project.css';
+import { title } from 'process';
 
 
 const data=[
   {
     id:0,
     title:"Static Interactive Resume",
-    desc:"Static Interactive Resume built with HTML and CSS, allowing user to showcase their skills dynamically.",
-    img:"/project_01.jpeg",
-    tags:["HTML", "Node" ,"CSS","TYPESCRIPT"],
+    desc:"Built with HTML,CSS,TYPESCRIPT and JAVASCRIPT,allowing user to showcase their skills.It generates a clean, downloadable, and shareable resume ijn a static format.",
+    img:"/project_01.png",
+    tags:["HTML", "Node" ,"CSS","TYPESCRIPT","JAVASCRIPT"],
   },
   {
     id:1,
     title:"Dynamic Resume Builder",
-    desc:"Dynamic Resume Builder built with HTML and CSS allowing user to create customized, professional resumes efficiently.",
-    img:"/project_02.jpeg",
-    tags:["HTML", "Node" ,"CSS","TYPESCRIPT"],
+    desc:"Dynamic Resume Builder built with HTML,CSS,TYPESCRIPT and JAVASCRIPT , allowing user to create customized, professional resumes efficiently.",
+    img:"/project_02.png",
+    tags:["HTML", "Node" ,"CSS","TYPESCRIPT","JAVASCRIPT"],
   },
   {
-    id:2,
+    id: 2,
+    title: "Web Design,Development",
+    desc: "A responsive and modern webpage built using HTML, Node.js, CSS, and TypeScript to demonstrate seamless integration of frontend and backend technologies.",
+    img: "/project_03.png",
+    tags: ["HTML", "Node", "CSS", "TYPESCRIPT","JAVASCRIPT"]
+  },
+   {id:3,
     title:"Editable Resume Builder",
-    desc:"Editable Resume Builder built with HTML and CSS  offers flexibility to adjust and tailor every part of the resume according to the user's preferences.",
-    img:"/project_03.jpeg",
-    tags:["HTML", "Node" ,"CSS","TYPESCRIPT"],
+    desc:"Built with HTML,CSS,TYPESCRIPT and JAVASCRIPT offers flexibility to adjust and tailor every part of the resume according to the user's preferences.",
+    img:"/project_04.png",
+    tags:["HTML", "NODE" ,"CSS","TYPESCRIPT","JAVASCRIPT"],
   },
   {
     id:4,
-    title:"Shareable Resume Builder",
-    desc:"Shareable Resume Builder built with HTML and CSS allowing user to create resumes that are not only customizable but also easily shareable through digital platforms",
-    img:"/project_04.jpeg",
-    tags:["HTML", "Node" ,"CSS","TYPESCRIPT"],
+    title:"Backatown Coffee Website",
+    desc:"The website serves as a virtual extension of the shop, providing visitors with an immersive experience that reflects the warmth and charm of the physical location.",
+    img:"/project_05.png",
+    tags:["HTML", "NODE" ,"CSS","TYPEESCRIPT","JAVASCRIPT"],
   },
   {
-    id:5,
-    title:"Backatown Coffee Corner Website",
-    desc:"The website serves as a virtual extension of the shop, providing visitors with an immersive experience that reflects the warmth and charm of the physical location.",
-    img:"/project_05.PNG",
-    tags:["HTML", "Node" ,"CSS"],
+    id: 5,
+    title: "My Portfolio Website",
+    desc: "Website built to showcase skills, projects, and achievements. The site features a modern design with responsive layouts, highlighting expertise in web development and AI.",
+    img: "/project_06.png",
+    tags: ["HTML", "NODE","CSS" ,"TAILWIND", "NEXT.JS"]
   },
+  
+
+
 ]
 
 const Project = () => {
   return (
-    <div id='projects' className='container pt-32 text-black font-bold'>
+    <div id='projects' >
       <Heading title='My Projects ' />
-      <div className='grid gap-10 xl:gap-y-10 md:grid-cols-2 lg:grid-cols-3 place-items-center items-baseline '>
+      <div className="projects-grid projects-grid-xl projects-grid-md-2 projects-grid-lg-3 projects-center">
       {data.map((el) =>(<Card
       key={el.id}
       title={el.title}
@@ -59,4 +70,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Project;

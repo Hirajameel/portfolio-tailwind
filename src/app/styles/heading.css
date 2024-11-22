@@ -1,0 +1,35 @@
+/* Container */
+.heading-container {
+    text-align: center; 
+    margin: 20px 0; 
+  }
+  
+  /* Main Heading */
+  .heading-title {
+    font-size: 3rem; 
+    font-weight: 700; 
+    color: #ff6f61;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; 
+    line-height: 1.2;
+  }
+  
+  /* Subtitle */
+  .heading-subtitle {
+    font-size: 1.5rem; 
+    font-weight: 400; 
+    color: #7f8c8d; 
+    margin-top: 8px; 
+    letter-spacing: 1px; 
+  }
+
+
+  @media (max-width: 768px) {
+    .heading-title {
+      font-size: 2rem; /* Slightly smaller heading on mobile */
+    
+  }
+
+  }
+
+  
