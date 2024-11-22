@@ -1,5 +1,4 @@
 import React from 'react'
-import '../app/styles/heading.css'
 
 interface propstype {
     title:string;
@@ -7,8 +6,8 @@ interface propstype {
 
 const Heading:React.FC<propstype>= ({title}) => {
   return (
-    <div className="heading-container">
-        <p className="heading-title">{title}</p>
+    <div className='text-center text-4xl pb-8'>
+        <p className='border-b-4 inline-block pb-2'>{title}</p>
 
     </div>
   )
