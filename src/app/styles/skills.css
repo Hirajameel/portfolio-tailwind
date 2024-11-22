@@ -1,0 +1,125 @@
+/* Skills Section Container */
+.skills-container {
+    background:  #f9f9f9; /* Light gradient background */
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Skills Left Section */
+.skills-left {
+    text-align: left;
+    padding: 20px;
+}
+
+.skills-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.skills-heading::after {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: #ff6f61;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    border-radius: 8px;
+}
+
+.skills-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Skills Right Section */
+.skills-right {
+    padding: 20px;
+}
+
+.skills-space {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.skills-space h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    background: #fff;
+    border: 2px solid #ff6f61;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-space h2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: #ff6f61;
+    color: #fff;
+}
+
+/* Icons Grid */
+.skilla-icons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Animation Effects */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos="zoom-in-left"] {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+[data-aos]:not([data-aos="zoom-in-left"]).aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-heading {
+        font-size: 2rem;
+    }
+
+    .skills-text {
+        font-size: 0.9rem;
+    }
+
+    .skills-space h2 {
+        font-size: 1rem;
+    }
+}

@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
+import '../app/styles/card.css';
 interface propstype {
     title: string;
     desc: string;
@@ -9,9 +10,10 @@ interface propstype {
 
 const Card:React.FC<propstype> = ({title,desc,img,tags}) => {
   return (
-    <div className='border-4  border-black lg:w-[300px] md:w-[300px] w-full'data-aos="zoom-in-left">
+    <div className='custom-container'>
+    <div className={`card-image ${window.innerWidth>=640? `card-sm` : ``}`}data-aos="zoom-in-left">
         <div>
-           <Image className='w-full h-56'
+           <Image className={`card-image ${window.innerWidth>=640? `card-sm` : ``}`}
            src={img}
            width={350}
            height={350}
@@ -19,17 +21,18 @@ const Card:React.FC<propstype> = ({title,desc,img,tags}) => {
            />
         </div>
 
-        <div className='p-4 space-y-4'>
-            <div className='text-4xl font-sans-extralight'>{title}</div>
-            <div>{desc}</div>
+        <div className="card-container">
+            <div className="card-title">{title}</div>
+            <div className="card-desc">{desc}</div>
             <div>
                 {tags.map((el) =>(
-                    <div className='tags'key={el}>
+                    <div className="card-tags" key={el}>
                         {el}
                     </div>))}
             </div>
         </div>
 
+    </div>
     </div>
   )
 }
